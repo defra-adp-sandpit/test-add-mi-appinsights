@@ -1,7 +1,7 @@
 kind: Job
 apiVersion: batch/v1
 metadata:
-  name: ffc-demo-calculation-service-monitoring-metrics-publisher
+  name: monitoring-metrics-publisher
   namespace: {{ .Values.namespace }}
   labels:
     azure.workload.identity/use: "true"
@@ -15,10 +15,9 @@ spec:
       labels:
         azure.workload.identity/use: "true"
     spec:
-      containers:
-        serviceAccountName: {{ .Values.serviceName }}
-        restartPolicy: Never
-        volumes:
+      serviceAccountName: {{ .Values.platformDbAdmin }}
+      restartPolicy: Never
+      volumes:
       - name: custom-root-ca
         secret:
           secretName: custom-ca-trust-secret
