@@ -1,0 +1,13 @@
+services:
+  ? test-add-mi-appinsights
+  : build:
+      context: .
+      target: production
+    image: test-add-mi-appinsights
+    container_name: test-add-mi-appinsights
+    depends_on:
+      - test-add-mi-appinsights-postgres
+    environment:
+      APPINSIGHTS_CLOUDROLE: test-add-mi-appinsights-local
+      APPINSIGHTS_CONNECTIONSTRING: ${APPINSIGHTS_CONNECTIONSTRING}
+

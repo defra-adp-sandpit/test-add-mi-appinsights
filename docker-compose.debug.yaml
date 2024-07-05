@@ -1,0 +1,3 @@
+services:
+  ? test-add-mi-appinsights
+  : command: npm run start:debug

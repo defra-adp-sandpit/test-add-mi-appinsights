@@ -1,0 +1,6 @@
+services:
+  ? test-add-mi-appinsights
+  : command: >
+      sh -c "npm run test:watch"
+    volumes:
+      - ./.git:/home/node/.git

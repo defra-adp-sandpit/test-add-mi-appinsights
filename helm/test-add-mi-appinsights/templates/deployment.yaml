@@ -1,0 +1,8 @@
+{{- include "adp-helm-library.deployment" (list . "test-add-mi-appinsights.deployment") -}}
+{{- define "test-add-mi-appinsights.deployment" -}}
+spec:
+  template:
+    spec:
+      containers:
+      - {{ include "adp-helm-library.container" (list . "test-add-mi-appinsights.container") }}
+{{- end -}}
