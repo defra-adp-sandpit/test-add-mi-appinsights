@@ -1,6 +1,6 @@
 {
   "name": "test-add-mi-appinsights",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "test-add-mi-appinsights",
   "homepage": "github.com?owner=defra&repo=test-add-mi-appinsights&organization=defra",
   "main": "app/index.js",
