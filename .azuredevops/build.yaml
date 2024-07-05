@@ -45,6 +45,7 @@ extends:
     serviceName: test-add-mi-appinsights
     deployFromFeature: ${{ parameters.deployFromFeature }}
     deployConfigOnly: ${{ parameters.deployConfigOnly }}
+    includePlatformEnvs: true
     appBuildConfig:
       appFrameworkType: "nodejs"
       projectPath: "./package.json"
