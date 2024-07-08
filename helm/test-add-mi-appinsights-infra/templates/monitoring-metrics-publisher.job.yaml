@@ -2,7 +2,7 @@ kind: Job
 apiVersion: batch/v1
 metadata:
   name: monitoring-metrics-publisher
-  namespace: {{ .Values.namespace }}
+  namespace: flux-config
   labels:
     azure.workload.identity/use: "true"
   annotations:
