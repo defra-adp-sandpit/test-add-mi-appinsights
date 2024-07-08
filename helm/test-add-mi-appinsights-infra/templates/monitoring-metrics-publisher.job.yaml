@@ -50,7 +50,7 @@ spec:
         - name: SSV_SHARED_SUBSCRIPTION_ID
           value: {{ .Values.ssvSharedSubscriptionId }}
         - name: AD_GROUP
-          value: AAG-Azure-ADP-SND1-AppInsight_Monitoring-Metrics-Reader
+          value: {{ .Values.adGroup }}
         - name: SP_CLIENT_ID_KV
           value: {{ .Values.ssvSpnClientIdKvName }}
         - name: SP_CLIENT_SECRET_KV
