@@ -46,15 +46,15 @@ spec:
         - name: SCRIPT_FILE_NAME
           value: common/scripts/access-control/aad/Add-ManagedIdToADGroup.ps1
         - name: MI_NAME
-          value: ${TEAM_MI_PREFIX}-${SERVICE_NAME}
+          value: {{ .Values.serviceMIName }}
         - name: SSV_SHARED_SUBSCRIPTION_ID
-          value: ${SSV_SHARED_SUBSCRIPTION_ID}
+          value: {{ .Values.ssvSharedSubscriptionId }}
         - name: AD_GROUP
           value: AAG-Azure-ADP-SND1-AppInsight_Monitoring-Metrics-Reader
         - name: SP_CLIENT_ID_KV
-          value: ${SSV_SPN_CLIENT_ID_KV_NAME}
+          value: {{ .Values.ssvSpnClientIdKvName }}
         - name: SP_CLIENT_SECRET_KV
-          value: ${SSV_SPN_CLIENT_SECRET_KV_NAME}
+          value: {{ .Values.ssvSpnClientSecretKvName }}
         - name: KEY_VAULT_NAME
-          value: ${SSV_PLATFORM_KEYVAULT}        
+          value: {{ .Values.ssvPlatformKeyvault }} 
   backoffLimit: 2
